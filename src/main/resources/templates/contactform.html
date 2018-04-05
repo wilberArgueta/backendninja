@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+	<title>Backend Ninja - Add/modify Contact</title>
+	<meta charset="utf-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1" />
+	<link rel="stylesheet"
+		href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" />
+	<script
+		src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+	<script
+		src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+    <link href="#" th:href="@{/css/style.css}" rel="stylesheet" />
+</head>
+<body>
+
+	<div class="jumbotron">
+		<div class="container">
+			<h1>Contact Form</h1>
+			<br/>
+			<form action="#" method="#" th:action="@{/contact/add}" th:method="post" th:object="${contactModel}">
+				<input type="hidden"  th:field="*{id}">
+				First Name: <input th:field="*{firstName}" type="text" class="form-control" th:value="${firstName}"></input>
+				<br/>
+				Last Name: <input th:field="*{lastName}" type="text" class="form-control" th:value="${lastName}"></input>
+				<br/>
+				Telephone: <input th:field="*{telephone}" type="text" class="form-control" th:value="${telephone}"></input>
+				<br/>
+				City: <input th:field="*{city}" type="text" class="form-control" th:value="${city}"></input>
+				<br/>
+				<br/>
+				<button class="btn btn-lg btn-primary btn-block" type="submit">
+					<span class="glyphicon glyphicon-ok" aria-hidden="true"></span> Accept
+				</button>
+			
+			</form>
+			<a href="#" th:href="@{/contact/show}">
+				<button class="btn btn-lg btn-primary btn-block" type="submit">
+					<span class="glyphicon glyphicon-remove" aria-hidden="true"></span> Accept
+				</button>
+			</a>
+		</div>
+	</div>
+
+</body>
+</html>
